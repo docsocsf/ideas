@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<ul>
+{% for idea in site.ideas %}
+{% assign status = idea.status | slugify %}
+{% capture github_url %} https://github.com/{{ site.github_username }}/ideas/blob/master/{{ idea.path }} {% endcapture %}
+
+<li class="idea">
+  <div class="content">
+    <h3 class="idea-title"><a href="{{ github_url }}">{{ idea.title }}</a></h3>
+    <p>
+      {{ idea.summary }}
+      <br/>
+      <span class="authors">by: {{ idea.authors | join: ', ' }}</span>
+    </p>
+  </div>
+  <span class="meta">
+    <span class="{{ status }}" >{{ idea.status }}</span>
+  </span>
+</li>
+{% endfor %}
+</ul>

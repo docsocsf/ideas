@@ -1,0 +1,14 @@
+title: DoCSoc SF Ideas
+github_username:  docsocsf
+
+collections:
+  - ideas
+
+# Build settings
+markdown: kramdown
+theme: jekyll-theme-minimal
+gems:
+  - jemoji
+exclude:
+  - Gemfile
+  - Gemfile.lock
